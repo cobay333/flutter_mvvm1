@@ -32,7 +32,7 @@ class LoginViewModel with ChangeNotifier {
       return;
     }
     setLoading(true);
-    await Future.delayed(const Duration(minutes: 2), () async {
+    await Future.delayed(const Duration(seconds: 30), () async {
       final result = await dataRepository.setAuthenticated(true);
       switch (result) {
         case Success<void>():

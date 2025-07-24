@@ -4,21 +4,24 @@ import 'package:base_project/ui/home/home_screen.dart';
 import 'package:base_project/ui/home/home_viewmodel.dart';
 import 'package:base_project/ui/login/login_screen.dart';
 import 'package:base_project/ui/login/login_viewmodel.dart';
+import 'package:base_project/ui/responsive/responsive_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../data/repository/data_repository.dart';
+import '../ui/responsive/data.dart' as data;
 import '../utils/Result.dart';
 
 GoRouter route() => GoRouter(
    initialLocation: RoutersDestination.home,
-   redirect: _redirect,
+   // redirect: _redirect,
    debugLogDiagnostics: true,
    routes: [
       GoRoute(path: RoutersDestination.home,
       builder: (context, state) {
-        return  HomeScreen(viewModel: HomeViewModel(context.read()));
+        return ResponsiveScreen(currentUser: data.user_0);
+        // return  HomeScreen(viewModel: HomeViewModel(context.read()));
       },),
       GoRoute(path: RoutersDestination.login,
       builder: (context, state) {

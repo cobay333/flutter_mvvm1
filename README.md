@@ -22,4 +22,7 @@ https://github.com/flutter/samples/tree/main/compass_app/app
  - flutter build apk --flavor dev -t lib/main_dev.dart
  - flutter build apk --[BuildType] --flavor [Flavor Name]
  - flutter build apk --debug --flavor production
+ - https://github.com/flutter/codelabs/blob/main/adaptive_app/codelab_rebuild.yaml
+ - LocaleKeys.services.tr(context: context),
+ - context.setLocale(Locale('en', 'US'));
  
