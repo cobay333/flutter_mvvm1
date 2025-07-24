@@ -10,8 +10,10 @@ import 'package:flutter_flavor/flutter_flavor.dart';
 
 void main() {
   FlavorConfig(
+    name: "DEV",
+    color: Colors.red,
     variables: {
-      "counter": 0,
+      "counter": 100,
       "baseUrl": "https://www.example1.com",
     },
   );
@@ -21,6 +23,6 @@ void main() {
     Provider(create: (context) => DataRepositoryImplement(remote: context.read(),
         sharedPreferences: context.read()) as DataRepository)
   ],
-  child: MyApp()));
+      child: MyApp()));
 }
 
